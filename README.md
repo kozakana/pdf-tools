@@ -38,12 +38,12 @@ docker run -v $PWD/pdf:/pdf gkmr/pdf-tools <command>
 ### pdftk
 pdftk can combines, splits and rearranges PDF files.
 #### Sample
-*merge pdf*
+**merge pdf**
 ```
 docker run -v $PWD/pdf:/pdf gkmr/pdf-tools pdftk /pdf/0.pdf /pdf/1.pdf cat output /pdf/merged.pdf
 ```
 
-*split pdf*
+**split pdf**
 ```
 docker run -v $PWD/pdf:/pdf gkmr/pdf-tools pdftk /pdf/input.pdf cat 1-3 output /pdf/splitted.pdf
 ```
