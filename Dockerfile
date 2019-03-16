@@ -10,6 +10,7 @@ RUN apk add pdftk \
             ghostscript \
             poppler \
             poppler-utils \
-            poppler-data
+            poppler-data \
+            qpdf
 
 WORKDIR /
