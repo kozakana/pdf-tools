@@ -7,6 +7,7 @@ This repository is a collection of useful pdf tools.
 ## Tool list
 * pdftk
 * ghostscript
+* qpdf
 * pdf2dsc 
 * pdf2ps
 * pdfdetach
@@ -59,6 +60,16 @@ docker run -v $PWD/pdf:/pdf gkmr/pdf-tools gs -sOutputFile=/pdf/grayscale.pdf -s
 ```
 #### Document
 https://www.ghostscript.com/doc/current/Use.htm
+
+### qpdf
+qpdf does structural and content-preserving transformations on PDF files.
+#### Sample
+Password clear.
+```
+docker run -v $PWD/pdf:/pdf gkmr/pdf-tools qpdf --decrypt encrypted.pdf --password=PASSWORD  decrypted.pdf 
+```
+#### Document
+http://qpdf.sourceforge.net/files/qpdf-manual.html
 
 ### pdf2dsc
 pdf2dsc is generate a PostScript page list of a PDF document.
