@@ -66,7 +66,7 @@ qpdf does structural and content-preserving transformations on PDF files.
 #### Sample
 Password clear.
 ```
-docker run -v $PWD/pdf:/pdf gkmr/pdf-tools qpdf --decrypt encrypted.pdf --password=PASSWORD  decrypted.pdf 
+docker run -v $PWD/pdf:/pdf gkmr/pdf-tools qpdf --decrypt /pdf/encrypted.pdf --password=PASSWORD  /pdf/decrypted.pdf
 ```
 #### Document
 http://qpdf.sourceforge.net/files/qpdf-manual.html
@@ -84,7 +84,7 @@ https://linux.die.net/man/1/pdf2dsc
 pdf2ps is Ghostscript PDF to PostScript translator.
 #### Sample
 ```
-docker run -v $PWD/pdf:/pdf gkmr/pdf-tools pdf2ps /pdf/input.pdf /pdf/output.pdf
+docker run -v $PWD/pdf:/pdf gkmr/pdf-tools pdf2ps /pdf/input.pdf /pdf/output.ps
 ```
 #### Document
 https://linux.die.net/man/1/pdf2ps
@@ -140,7 +140,7 @@ http://manpages.ubuntu.com/manpages/cosmic/man1/pdfseparate.1.html
 pdftocairo is to PNG/JPEG/TIFF/PDF/PS/EPS/SVG using cairo.
 #### Sample
 ```
-docker run -v $PWD/pdf:/pdf gkmr/pdf-tools pdftocairo /pdf/input.pdf /pdf/output
+docker run -v $PWD/pdf:/pdf gkmr/pdf-tools pdftocairo -jpeg /pdf/input.pdf /pdf/output
 ```
 #### Document
 http://manpages.ubuntu.com/manpages/cosmic/man1/pdftocairo.1.html
